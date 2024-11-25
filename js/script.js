@@ -1,7 +1,15 @@
+const addBtn = document.querySelector('.add-element__btn');
+
 const elements = [
     '1;1;gender;SELECT;Male,Female',
     '2;1;firstName;TEXT_INPUT;Enter your first name',
 ]
+
+addBtn.addEventListener('click', function() {
+    const inputValue = document.querySelector('.input').value;
+     elements.push(inputValue);
+     createDrawerElement(elements);
+})
 
 function createDrawerElement(inputs) {
     const container = document.querySelector('.drawer-element');
